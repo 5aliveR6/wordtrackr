@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<meta charset="ISO-8859-1"> 
+<html>
+<head>
+    <link href="resources/css/dash.css" type="text/css" rel="stylesheet">
+    <title>Wordtrackr - Dashboard</title>
+</head>
+<body>
+    <!--Navbar-->
+    <div class="topnav">
+        <a href="dash.html">Dashboard</a>
+        <a class="active" href="#projects">My Projects</a>
+        <a href="progress.html">Progress</a>
+        <a href="settings.html">Settings</a>
+      </div> 
+
+    <div class="title">
+        <h1>Enter new Progress</h1>
+        <div class="DataEntry">
+            <form>
+                <label for="entrydate">Date</label>
+                <input type="date" id="date" name="date" placeholder="21.12.2012">
+                 <label for="sessionvalue">Words written</label>
+                <input type="number" id="sessionvalue" name="sessionvalue" placeholder="850">
+        
+                <label for="project">Project</label>
+                    <select id="country" name="country">
+                        <option value="Germany">Germany</option>
+                        <option value="USA">United States of America</option>
+                        <option value="UK">United Kingdom</option>
+            </select>
+          
+            <input type="submit" value="Submit">
+          </form>
+        </div>
+    </div>
+
+    <div class="title">
+        <h1>Your Logs</h1>
+    </div>
+        <table>
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Words written</th>
+                <th>Daily Quota</th>
+                <th>Progress</th>         
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>21.11.2021</td>
+                <td>13:35</td>
+                <td>350</td>
+                <td>225</td>
+                <td>34%</td>
+            </tr>
+            <tr>
+                <td>21.11.2021</td>
+                <td>13:35</td>
+                <td>350</td>
+                <td>225</td>
+                <td>34%</td>
+            </tr>
+            <tr>
+                <td>21.11.2021</td>
+                <td>13:35</td>
+                <td>350</td>
+                <td>225</td>
+                <td>34%</td>
+            </tr>
+            </tbody>
+        </table>
+     <br>
+    <footer>
+        <p>Thanks for using Wordtrackr. Want more? <a href="#contactus">Contact Us.</a></p>
+    </footer>
+    <script src="javascript/main.js"></script>
+</body>
+</html>

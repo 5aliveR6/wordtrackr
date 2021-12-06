@@ -5,8 +5,7 @@
   }
    
   body {
-    min-width:50%;
-    max-width:60%;
+    width: clamp(500px, 70%, 900px);
     margin: 0 auto;
     background-color: #212121;
   }
@@ -47,6 +46,7 @@
 
 .StatsBoxBody {
   min-width: 60%;
+  margin-top: 3%;
 }
 
 .StatsBox {
@@ -88,6 +88,50 @@ footer p {
 
 footer a {
   color:rgb(100, 113, 170)
+}
+
+/* TABLE STYLING */
+table {
+	width: clamp(700, 800, 900);
+  margin: auto;
+	border-collapse: collapse;
+	overflow: hidden;
+  border-radius: 15px;
+	box-shadow:
+  1.6px 1.9px 2.5px -16px rgba(0, 0, 0, 0.042),
+  3.8px 4.5px 6.1px -16px rgba(0, 0, 0, 0.061),
+  7.1px 8.4px 11.5px -16px rgba(0, 0, 0, 0.075),
+  12.7px 15px 20.5px -16px rgba(0, 0, 0, 0.089),
+  23.8px 28px 38.4px -16px rgba(0, 0, 0, 0.108),
+  57px 67px 92px -16px rgba(0, 0, 0, 0.15);
+}
+
+th {
+  padding: 1em;
+  font-size: 1.25em;
+  font-style: italic;
+  background-color: rgb(58, 146, 85);
+}
+
+td {
+	padding: 15px;
+	color: rgb(238, 238, 238);
+  text-align: left;
+  text-shadow: 
+  1.6px 1.9px 2.5px -16px rgba(0, 0, 0, 0.042),
+  3.8px 4.5px 6.1px -16px rgba(0, 0, 0, 0.061),
+  7.1px 8.4px 11.5px -16px rgba(0, 0, 0, 0.075),
+  12.7px 15px 20.5px -16px rgba(0, 0, 0, 0.089),
+  23.8px 28px 38.4px -16px rgba(0, 0, 0, 0.108),
+  57px 67px 92px -16px rgba(0, 0, 0, 0.15);
+}
+
+tr:nth-child(even) {
+  background-color: rgb(58, 146, 85);
+}
+
+tr:nth-child(odd) {
+  background-color: rgb(54, 54, 54);
 }
 
 /* Topnav Bg */
@@ -141,7 +185,21 @@ footer a {
 
   /* INPUT STLYLING */
 
-  .AccountInfo {
+/* Hide Step Arrows for Input Fields
+ Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+  .AccountInfo,
+  .DataEntry {
     border-radius: 14px;
     background-color: rgb(54, 54, 54);
     padding: 20px;
@@ -149,6 +207,12 @@ footer a {
     max-width: 400px;
   }
 
+  .DataEntry {
+    margin: auto;
+  }
+
+input[type=date],
+input[type=number],
   input[type=text], select {
     width: 100%;
     padding: 12px 20px;
